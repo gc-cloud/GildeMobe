@@ -6,4 +6,4 @@ This line is a test to check I can put changes into the repository direclty from
 
 This pic shows where to find the Git menu inside IDEA
 
-![Alt text](GitIDEA.png?raw=true "Using Git in Intellij IDEA")
+![Alt text](GitIDEA_Menu.png?raw=true "Using Git in Intellij IDEA")
