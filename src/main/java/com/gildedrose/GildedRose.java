@@ -44,6 +44,10 @@ class GildedRose {
             }
 
             if (items[i].sellIn < 0) {
+                /* GC: The nested logic before else is equal to  item not an exception AND
+            quality > 0. We can replace with
+            if(!exception && items[i].quality > 0)
+             */
                 if (!items[i].name.equals(AGED_BRIE)) {
                     if (!items[i].name.equals(BACKSTAGE_PASSES)) {
                         if (items[i].quality > 0) {
@@ -51,7 +55,8 @@ class GildedRose {
                                 decrementQuality(i);
                             }
                         }
-                    } else {
+                    }
+                    else {
                         items[i].quality = 0;
                     }
                 } else {
