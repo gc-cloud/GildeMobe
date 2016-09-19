@@ -1,7 +1,8 @@
 #CSCIE71 GildedRose Mob
 
 This repository contains the refactored and enhanced GildedRose code for our mob **(we need a name!)**
-Mob Members
+
+Mob Membership:
 * Alberto Garza
 * Ran Zhang
 * Rafael Flores
