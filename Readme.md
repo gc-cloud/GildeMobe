@@ -14,7 +14,7 @@ The initial version shows the status as of end of day 9-18-2016
 
 
 ##Criteria list
-In Canvas, join a Mob Programming group with the members of your mob programming team from Sunday’s on-campus class. 
+###In Canvas, join a Mob Programming group with the members of your mob programming team from Sunday’s on-campus class. 
 * Everyone joined Mob Programming 2
 
 ###Create a public GitHub repository for your mob. 
