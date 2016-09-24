@@ -54,7 +54,7 @@ In Canvas, join a Mob Programming group with the members of your mob programming
 ![Alt text](test-results.png?raw=true "All tests passed")
 
 ###Refactor the Gilded Rose production code, removing as many code smells as possible, refactoring for clean code. Your refactored Gilded Rose production code should be short and concise. Commit your refactored code to your repo.
-* CLeaned-up code in repo
+* Cleaned-up code in repo
 
 ###Add the new feature. Use TDD. Your test method(s) for the new inventory item, Conjured items, must start with the word “conjured”. You have at least one test method for Conjured items, and it proves that Conjured items degrade twice as fast as ordinary items. All tests pass.
 * Added new tests for conjured items.  
