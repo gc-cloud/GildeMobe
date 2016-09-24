@@ -120,4 +120,19 @@ public class GildedRoseTest {
         assertEquals(50, app.items[0].quality);
     }
 
+    @Test
+    public void sulfurasAlways80() {
+        Item[] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 2, 49) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(80, app.items[0].quality);
+    }
+
+    @Test
+    public void negativeQuality() {
+        Item[] items = new Item[] { new Item("WhatEver", 2, -13) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(0, app.items[0].quality);
+    }
 }
