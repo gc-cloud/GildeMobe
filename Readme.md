@@ -1,6 +1,6 @@
 #CSCIE71 GildedRose Mob
 
-This repository contains the refactored and enhanced GildedRose code for our mob **(we need a name!)**
+This repository contains the refactored and enhanced GildedRose code for group **Mob Programming 2**
 
 ##Mob Membership
 * Alberto Garza
@@ -15,7 +15,7 @@ The initial version shows the status as of end of day 9-18-2016
 
 ##Criteria list
 In Canvas, join a Mob Programming group with the members of your mob programming team from Sunday’s on-campus class. 
-* Everyone joined Group Two
+* Everyone joined Mob Programming 2
 
 Create a public GitHub repository for your mob. 
 * https://github.com/gc-cloud/GildedMobe
