@@ -135,4 +135,12 @@ public class GildedRoseTest {
         app.updateQuality();
         assertEquals(0, app.items[0].quality);
     }
+
+    @Test
+    public void testConjuredItems() {
+        Item[] items = new Item[] { new Item("Conjured Mana Cake", 2, 20) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(18, app.items[0].quality);
+    }
 }
