@@ -49,8 +49,9 @@ Aim for excellent code coverage of the production code; ignore code coverage of 
 * We achieved 100% code coverage for the GildedRose class
 ![Alt text](Result.png?raw=true "Test Coverage & Hangout")
 
-Show that all your unit tests pass. Take a screen shot of the JUnit tests in your IDE, showing the list of all unit tests and their results. Or copy the console output of your JUnit tests into a text file. Include the screen shot or text file in your git repo. Name the file test-results.png or test-results.txt.
-![Alt text](test-passed.png?raw=true "All tests passed")
+Show that all your unit tests pass. Take a screen shot of the JUnit tests in your IDE, showing the list of all unit tests and their results. 
+* Console output showing all JUnit tests passed
+![Alt text](test-results.png?raw=true "All tests passed")
 
 Refactor the Gilded Rose production code, removing as many code smells as possible, refactoring for clean code. Your refactored Gilded Rose production code should be short and concise. Commit your refactored code to your repo.
 * Code in repo
