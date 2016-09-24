@@ -10,11 +10,11 @@ class GildedRose {
     private String[] specialItems = {AGED_BRIE, BACKSTAGE_PASSES, SULFURAS};
     Item[] items;
 
-    protected GildedRose(Item[] items) {
+     GildedRose(Item[] items) {
         this.items = items;
     }
 
-    protected void updateQuality() {
+     void updateQuality() {
 
         for (int i = 0; i < items.length; i++) {
             /* Check if item is in the list of exceptions */
