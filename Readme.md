@@ -40,7 +40,7 @@ In Canvas, join a Mob Programming group with the members of your mob programming
 
 
 ###Add your Gilded Rose code to your repo.
-* Repo is current, 28 commits at the time this Readme file is written
+* Repo is current, 29 commits at the time this Readme file is written
 
 ###Mob with your teammates to add unit tests until it is safe to refactor the legacy code. 
 * The session took over three hours, this video shows the start of the session [Mob Session](https://www.youtube.com/watch?v=l6lQjZ9BMyc)
