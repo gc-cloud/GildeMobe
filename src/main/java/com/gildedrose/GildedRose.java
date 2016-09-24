@@ -3,18 +3,18 @@ package com.gildedrose;
 import java.util.Arrays;
 
 class GildedRose {
-    public static final String AGED_BRIE = "Aged Brie";
-    public static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
-    public static final int MAX_QUALITY = 50;
-    public static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
-    public String[] specialItems = {AGED_BRIE, BACKSTAGE_PASSES, SULFURAS};
+    private static final String AGED_BRIE = "Aged Brie";
+    private static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
+    private static final int MAX_QUALITY = 50;
+    private static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
+    private String[] specialItems = {AGED_BRIE, BACKSTAGE_PASSES, SULFURAS};
     Item[] items;
 
-    public GildedRose(Item[] items) {
+    protected GildedRose(Item[] items) {
         this.items = items;
     }
 
-    public void updateQuality() {
+    protected void updateQuality() {
 
         for (int i = 0; i < items.length; i++) {
             /* Check if item is in the list of exceptions */
