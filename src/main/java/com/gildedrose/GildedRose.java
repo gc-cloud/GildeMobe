@@ -49,6 +49,7 @@ class GildedRose {
             if (items[i].quality < 0) {items[i].quality = 0;}
 
         }
+        
     }
 
     /* ---------------------   Private methods    ----------------------------- */

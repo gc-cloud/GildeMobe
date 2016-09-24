@@ -14,6 +14,13 @@ The initial version shows the status as of end of day 9-18-2016
 Changes into the repository can be done directly from IDEA
 ![Alt text](GitIDEA_MENU.png?raw=true "Using Git in Intellij IDEA")
 
+The team used Google Hangouts for mob collaboration. Below is a screenshot of our mob session as well as a link to a
+video of a section of it.
 
-#Testing
-- Added test for sulfuras alway 80
+[screenshot]
+
+[link to video]
+
+#Changes
+- Added test for sulfuras always 80
+- Added test for "conjured" items
