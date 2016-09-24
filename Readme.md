@@ -40,21 +40,21 @@ In Canvas, join a Mob Programming group with the members of your mob programming
 
 
 ###Add your Gilded Rose code to your repo.
-* Repo is current, 22 commits at the time this Readme file is written
+* Repo is current, 28 commits at the time this Readme file is written
 
 ###Mob with your teammates to add unit tests until it is safe to refactor the legacy code. 
 * The session took over three hours, this video shows the start of the session [Mob Session](https://www.youtube.com/watch?v=l6lQjZ9BMyc)
 
 ###Aim for excellent code coverage of the production code; ignore code coverage of the test code. 
 * We achieved 100% code coverage for the GildedRose class
-![Alt text](Result.png?raw=true "Test Coverage & Hangout")
+![Alt text](code-coverage.png?raw=true "Test Coverage & Hangout")
 
 ###Show that all your unit tests pass. Take a screen shot of the JUnit tests in your IDE, showing the list of all unit tests and their results. 
 * Console output showing all JUnit tests passed
 ![Alt text](test-results.png?raw=true "All tests passed")
 
 ###Refactor the Gilded Rose production code, removing as many code smells as possible, refactoring for clean code. Your refactored Gilded Rose production code should be short and concise. Commit your refactored code to your repo.
-* Code in repo
+* CLeaned-up code in repo
 
 ###Add the new feature. Use TDD. Your test method(s) for the new inventory item, Conjured items, must start with the word “conjured”. You have at least one test method for Conjured items, and it proves that Conjured items degrade twice as fast as ordinary items. All tests pass.
 * Added new tests for conjured items.  

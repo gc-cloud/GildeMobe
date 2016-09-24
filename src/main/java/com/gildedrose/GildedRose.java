@@ -20,7 +20,8 @@ class GildedRose {
             /* Check if item is in the list of exceptions */
             boolean exception = Arrays.asList(specialItems).contains(items[i].name);
 
-            /* Update  quality for current items. Backstage depends on sellIn value. Conjured items degrade twice as quickly.  */
+            /* Update  quality for current items. Backstage depends on sellIn value. Conjured items degrade
+            twice as quickly.  */
             if (!exception) {
                 decrementQuality(i);
                 if(items[i].name.toLowerCase().contains("conjured")){
@@ -41,7 +42,6 @@ class GildedRose {
                 if (!exception) { decrementQuality(i); }
                 if (items[i].name.equals(BACKSTAGE_PASSES)) { items[i].quality = 0; }
                 if (items[i].name.equals(AGED_BRIE)) { incrementQuality(i); }
-
             }
             
             /* Check for poorly created Items */
