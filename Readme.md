@@ -12,35 +12,50 @@ Mob Membership:
 The initial version shows the status as of end of day 9-18-2016
 
 Changes into the repository can be done directly from IDEA
-![Alt text](GitIDEA_MENU.png?raw=true "Using Git in Intellij IDEA")
-![Alt text](Result.png?raw=true "Using Git in Intellij IDEA")
-The team used Google Hangouts for mob collaboration. Below is a screenshot of our mob session as well as a link to a
-video of a section of it.
 
-[screenshot]
+
 
 [link to video]
 
 #Changes
-- Added test for sulfuras always 80
-- Added test for "conjured" items
-- Changed class updateQuality and GildedRose to package-private
+
 
 
 Criteria
-In Canvas, join a Mob Programming group with the members of your mob programming team from Sunday’s on-campus class. You will all receive the same grade for this assignment.
-Group two
-Create a public GitHub repository for your mob. Submit the URL of your repo as the solution to this assignment.
+In Canvas, join a Mob Programming group with the members of your mob programming team from Sunday’s on-campus class. 
+* Everyone joined Group Two
 
-Identify at least one solution for remote pair- and mob programming. What tools will you use to enable excellent f2f-like collaboration? Strive to reproduce the mobbing we experienced during our on-campus weekend. Document your solution in your repo’s README.
+Create a public GitHub repository for your mob. 
+* https://github.com/gc-cloud/GildedMobe
+
+Identify at least one solution for remote pair- and mob programming. 
+* We used Google hangouts.  With this we were able to discuss changes, generate ideas and share the screen.  Recording the session was a challenge within Google Hangouts and we used OBS
+* We also used VCS control from inside Intellij IDEA.  This was helpful to have everyone make and access changes to the code base and push / pull to GitHub
+![Alt text](GitIDEA_MENU.png?raw=true "Using Git in Intellij IDEA")
+![Alt text](Result.png?raw=true "Using Git in Intellij IDEA")
 
 Complete the Gilded Rose refactoring kata with your mob programming team.
+* Moved redundant code to functions, eliminated nested if-else, added comments, eliminated magic numbers, etc
+* Created constants exception items and other values
+* Enhanced and completed battery of tests
+* Added test for sulfuras always 80
+* Added test for "conjured" items
+* Enhanced code robustness to fix improperly declared new items
+* New items with quality < 0 
+* Sulfuras always has quality of 80
+* Modified access levels to more robust settings when possible (private, package-private)
+* Several other changes
 
-- Add your Gilded Rose code to your repo.
 
-- Mob with your teammates to add unit tests until it is safe to refactor the legacy code. To demonstrate that you worked as a mob, capture video of your session. Upload your video to YouTube or Vimeo. Here's an example. Document the URL of your video in your repo's README file.
+Add your Gilded Rose code to your repo.
+* Repo is current, 22 commits at the time this Readme file is written
 
-- Aim for excellent code coverage of the production code; ignore code coverage of the test code. Some of the on-campus mobs achieved >90% code coverage before they began refactoring. Take a screenshot of your IDE or code coverage tool showing your project's code coverage. Include the screenshot in your git repo as a file named code-coverage.png.
+Mob with your teammates to add unit tests until it is safe to refactor the legacy code. 
+* The session took over three hours, this video shows the start of the session
+* [Mob Session](https://www.youtube.com/watch?v=l6lQjZ9BMyc)
+
+Aim for excellent code coverage of the production code; ignore code coverage of the test code. Some of the on-campus mobs achieved >90% code coverage before they began refactoring. Take a screenshot of your IDE or code coverage tool showing your project's code coverage. Include the screenshot in your git repo as a file named code-coverage.png.
+* We achieved 100% code coverage for the GildedRose class (shown on screenshot above)
 
 - Show that all your unit tests pass. Take a screen shot of the JUnit tests in your IDE, showing the list of all unit tests and their results. Or copy the console output of your JUnit tests into a text file. Include the screen shot or text file in your git repo. Name the file test-results.png or test-results.txt.
 
