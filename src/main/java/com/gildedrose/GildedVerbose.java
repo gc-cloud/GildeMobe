@@ -1,0 +1,75 @@
+package com.gildedrose;
+
+import java.util.Arrays;
+
+public class GildedVerbose {
+
+    public static final String AGED_BRIE = "Aged Brie";
+    public static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
+    public static final int MAX_QUALITY = 50;
+    public static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
+    public String[] specialItems = {AGED_BRIE, BACKSTAGE_PASSES, SULFURAS};
+    Item[] items;
+
+    public GildedVerbose(Item[] items) {
+        this.items = items;
+    }
+
+    public void updateQuality() {
+
+        for (int i = 0; i < items.length; i++) {
+            boolean exception = Arrays.asList(specialItems).contains(items[i].name);
+            if(!exception && items[i].quality > 0) { // DRY  test
+                decrementQuality(i);
+            } else {
+                if (items[i].quality < MAX_QUALITY) { // DRY  test
+                    incrementQualityV(i);
+
+                    if (items[i].name.equals(BACKSTAGE_PASSES)) {
+                        if (items[i].sellIn < 11) {
+                            incrementQualityV(i);
+                        }
+
+                        if (items[i].sellIn < 6) {
+                            incrementQualityV(i);
+                        }
+                    }
+                    if(items[i].quality > MAX_QUALITY){ // DRY  test
+                        items[i].quality = MAX_QUALITY;
+                    }
+                }
+            }
+
+            if (!items[i].name.equals(SULFURAS)) {
+                items[i].sellIn = items[i].sellIn - 1;
+            }
+
+            if (items[i].sellIn < 0) {
+                if (!items[i].name.equals(AGED_BRIE)) { // Exception item
+                    if (!items[i].name.equals(BACKSTAGE_PASSES)) { // Exception item
+                        if (items[i].quality > 0) { // DRY  test
+                            if (!items[i].name.equals(SULFURAS)) { // Exception item
+                                decrementQuality(i);
+                            }
+                        }
+                    }
+                    else { // weird nest - applies to backstage passes only
+                        items[i].quality = 0;
+                    }
+                } else {
+                    if (items[i].quality < MAX_QUALITY) { // DRY  test
+                        incrementQualityV(i);
+                    }
+                }
+            }
+        }
+    }
+
+    private void incrementQualityV(int i) {
+        items[i].quality = items[i].quality + 1;
+    }
+
+    private void decrementQuality(int i) {
+        items[i].quality = items[i].quality - 1;
+    }
+}

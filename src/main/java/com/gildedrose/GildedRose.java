@@ -17,62 +17,43 @@ class GildedRose {
     public void updateQuality() {
 
         for (int i = 0; i < items.length; i++) {
+            /* Check if item is in the list of exceptions */
             boolean exception = Arrays.asList(specialItems).contains(items[i].name);
-            if(!exception && items[i].quality > 0) {
-                    decrementQuality(i);
+
+            /* Update  quality for current items. Backstage depends on sellIn value  */
+            if (!exception) {
+                decrementQuality(i);
             } else {
-                if (items[i].quality < MAX_QUALITY) {
-                    incrementQuality(i);
-
-                    if (items[i].name.equals(BACKSTAGE_PASSES)) {
-                        if (items[i].sellIn < 11) {
-                            incrementQuality(i);
-                        }
-
-                        if (items[i].sellIn < 6) {
-                            incrementQuality(i);
-                        }
-                    }
-                    if(items[i].quality > MAX_QUALITY){
-                        items[i].quality = MAX_QUALITY;
-                    }
+                incrementQuality(i);
+                if (items[i].name.equals(BACKSTAGE_PASSES)) {
+                    if (items[i].sellIn < 11) { incrementQuality(i); }
+                    if (items[i].sellIn < 6)  { incrementQuality(i); }
                 }
             }
 
-            if (!items[i].name.equals(SULFURAS)) {
-                items[i].sellIn = items[i].sellIn - 1;
-            }
+            decrementDays(items[i]);
 
+            /* Update quality for old items. Backstage, Aged Brie and Sulfuras are exceptions */
             if (items[i].sellIn < 0) {
-                /* GC: The nested logic before else is equal to  item not an exception AND
-            quality > 0. We can replace with
-            if(!exception && items[i].quality > 0)
-             */
-                if (!items[i].name.equals(AGED_BRIE)) {
-                    if (!items[i].name.equals(BACKSTAGE_PASSES)) {
-                        if (items[i].quality > 0) {
-                            if (!items[i].name.equals(SULFURAS)) {
-                                decrementQuality(i);
-                            }
-                        }
-                    }
-                    else {
-                        items[i].quality = 0;
-                    }
-                } else {
-                    if (items[i].quality < MAX_QUALITY) {
-                        incrementQuality(i);
-                    }
-                }
+                if (!exception) { decrementQuality(i); }
+                if (items[i].name.equals(BACKSTAGE_PASSES)) { items[i].quality = 0; }
+                if (items[i].name.equals(AGED_BRIE) || items[i].name.equals(SULFURAS)) { incrementQuality(i); }
             }
+
         }
     }
 
+    /* ---------------------   Private methods    ----------------------------- */
+    private void decrementDays(Item item) {
+        if (!item.name.equals(SULFURAS)) { item.sellIn--; }
+    }
+
     private void incrementQuality(int i) {
-        items[i].quality = items[i].quality + 1;
+        if (items[i].quality < MAX_QUALITY) { items[i].quality++; }
     }
 
     private void decrementQuality(int i) {
-        items[i].quality = items[i].quality - 1;
+        if (items[i].quality > 0) { items[i].quality--; }
     }
 }
+
