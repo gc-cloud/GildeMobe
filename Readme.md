@@ -31,7 +31,7 @@ The initial version shows the status as of end of day 9-18-2016
 * Created constants exception items and other values
 * Enhanced and completed battery of tests
 * Added test for sulfuras always 80
-* Added test for "conjured" items
+* Added two tests for "conjured" items,first test decrease by 2 for non-expired items, second decrease by 4 for expired items.
 * Enhanced code robustness to fix improperly declared new items
 * New items with quality < 0 
 * Sulfuras always has quality of 80
