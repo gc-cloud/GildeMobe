@@ -7,6 +7,10 @@ class GildedRose {
     private static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
     private static final int MAX_QUALITY = 50;
     private static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
+    private static final int DAYS_CLOSE_BACKSTAGE = 11;
+    private static final int DAYS_RUSH_BACKSTAGE = 6;
+    private static final int SULFURAS_QUALITY = 80;
+    private static final String CONJURED = "conjured";
     private String[] specialItems = {AGED_BRIE, BACKSTAGE_PASSES, SULFURAS};
     Item[] items;
 
@@ -24,14 +28,14 @@ class GildedRose {
             twice as quickly.  */
             if (!exception) {
                 decrementQuality(i);
-                if(items[i].name.toLowerCase().contains("conjured")){
+                if(items[i].name.toLowerCase().contains(CONJURED)){
                     decrementQuality(i);
                 }
             } else {
                 incrementQuality(i);
                 if (items[i].name.equals(BACKSTAGE_PASSES)) {
-                    if (items[i].sellIn < 11) { incrementQuality(i); }
-                    if (items[i].sellIn < 6)  { incrementQuality(i); }
+                    if (items[i].sellIn < DAYS_CLOSE_BACKSTAGE) { incrementQuality(i); }
+                    if (items[i].sellIn < DAYS_RUSH_BACKSTAGE)  { incrementQuality(i); }
                 }
             }
 
@@ -45,7 +49,7 @@ class GildedRose {
             }
             
             /* Check for poorly created Items */
-            if(items[i].name.equals(SULFURAS)) {items[i].quality = 80;}
+            if(items[i].name.equals(SULFURAS)) {items[i].quality = SULFURAS_QUALITY;}
             if (items[i].quality < 0) {items[i].quality = 0;}
 
         }
