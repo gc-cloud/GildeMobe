@@ -28,9 +28,7 @@ class GildedRose {
             twice as quickly.  */
             if (!exception) {
                 decrementQuality(i);
-                if(items[i].name.toLowerCase().contains(CONJURED)){
-                    decrementQuality(i);
-                }
+                if(items[i].name.toLowerCase().contains(CONJURED)){ decrementQuality(i);}
             } else {
                 incrementQuality(i);
                 if (items[i].name.equals(BACKSTAGE_PASSES)) {
@@ -44,14 +42,12 @@ class GildedRose {
             /* Update quality for old items. Backstage, Aged Brie and Sulfuras are exceptions */
             if (items[i].sellIn < 0) {
                 if (!exception) { decrementQuality(i); }
-                if(items[i].name.toLowerCase().contains(CONJURED)){
-                    decrementQuality(i);
-                }
+                if(items[i].name.toLowerCase().contains(CONJURED)){ decrementQuality(i); }
                 if (items[i].name.equals(BACKSTAGE_PASSES)) { items[i].quality = 0; }
                 if (items[i].name.equals(AGED_BRIE)) { incrementQuality(i); }
             }
             
-            /* Check for poorly created Items */
+            /* Fix poorly created Items */
             if(items[i].name.equals(SULFURAS)) {items[i].quality = SULFURAS_QUALITY;}
             if (items[i].quality < 0) {items[i].quality = 0;}
 
@@ -68,7 +64,6 @@ class GildedRose {
         if (items[i].quality < MAX_QUALITY) { items[i].quality++; }
     }
 
-    /* default decrement quality is 1*/
     private void decrementQuality(int i) {
         if (items[i].quality > 0) { items[i].quality--; }
     }
